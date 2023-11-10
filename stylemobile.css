@@ -1,4 +1,4 @@
-@media (min-width: 769px) {
+@media (max-width: 768px) {
   * {
     margin: 0;
     padding: 0;
@@ -8,32 +8,134 @@
     animation: fadeIn 0.7s;
   }
 
-  .hamburger-menu {
-    display: none;
+  #menu__toggle {
+    opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    right: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    margin-right: 20px;
+    margin-top: 10px;
+    right: 0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #797373fd;
+    transition-duration: 0.3s;
+  }
+  .menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+
+  .menu__box {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 50px 0;
+    padding-bottom: 200px;
+    list-style: none;
+    background-color: #171717;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.5s;
+    z-index: 3;
+    overflow-y: scroll;
+  }
+
+  .menu__item {
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #ffffff;
+    font-family: Avenir;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: center;
+    transition-duration: 0.25s;
+    align-items: center;
+  }
+
+  .menu__item2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-family: Avenir;
+    width: auto;
+    font-size: 15px;
+    padding: 5px;
+    text-decoration: none;
+  }
+
+  .menu__item2:hover {
+    transition: 0.3s ease;
+    color: #ffffff65;
   }
 
   #nav {
     box-sizing: border-box;
     width: 100%;
-    position: fixed;
+    position: relative;
     height: 70px;
     display: flex;
     align-items: center;
     background: var(--standard-negative, #171717);
     flex-shrink: 0;
-    padding: 20px;
-    z-index: 4;
   }
 
   #logo {
-    width: 46px;
-    height: 47px;
+    width: 36px;
+    height: 37px;
     margin-right: 15px;
     flex-shrink: 0;
     cursor: pointer;
+    z-index: 2;
+  }
+
+  #logolink {
+    z-index: 2;
   }
 
   #title {
+    display: none;
+  }
+
+  #title2 {
     color: #fff;
     font-family: Avenir;
     font-size: 18px;
@@ -42,10 +144,7 @@
     line-height: normal;
     margin-right: 50px;
     white-space: nowrap;
-  }
-
-  #title2 {
-    display: none;
+    z-index: 2;
   }
 
   .navcontainer {
@@ -57,7 +156,7 @@
   .navcontent {
     color: #fff;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -160,12 +259,6 @@
     font-family: Avenir;
   }
 
-  ul li a:hover {
-    background-color: rgb(255, 255, 255);
-    color: #171717;
-    animation: side 0.3s ease;
-  }
-
   #donate {
     width: 170px;
     height: 45px;
@@ -180,6 +273,7 @@
     line-height: normal;
     border: 0px;
     cursor: pointer;
+    display: none;
   }
 
   #donate:hover {
@@ -189,13 +283,7 @@
   }
 
   #navgroup {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: 20px;
-    flex-shrink: 0;
-    justify-content: center;
-    width: auto;
+    display: none;
   }
 
   #arrow2 {
@@ -215,8 +303,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 100%;
-    height: 800px;
+    width: 100%; /* Adjust the banner width to fit the screen */
+    height: 300px;
     background-image: url("./assets/image-4-bg.png");
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the image within the container */
@@ -241,7 +329,7 @@
     color: #fff;
     text-align: center;
     font-family: Avenir;
-    font-size: 56px;
+    font-size: 21px;
     font-style: normal;
     font-weight: bold;
     position: relative;
@@ -250,13 +338,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 900px;
-    max-width: 90%;
+    width: 90%;
   }
 
   #line {
-    width: 241px;
-    height: 8px;
+    width: 150px;
+    height: 5px;
     background: var(--standard-produce, #6ecfce);
     z-index: 2;
     flex-direction: column;
@@ -264,17 +351,16 @@
     justify-content: center;
     flex-shrink: 0;
     display: flex;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 
   #describ {
     color: #fff;
-    width: 700px;
-    max-width: 90%;
+    width: 90%;
     text-align: center;
     font-family: Avenir;
-    font-size: 24px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 500;
     position: relative;
@@ -296,10 +382,11 @@
     padding: 16px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    display: none;
   }
 
   .next {
@@ -339,18 +426,17 @@
 
   #announce {
     box-sizing: border-box;
-    width: 50%;
-    height: auto;
+    width: 100%;
+    height: 230px;
     flex-shrink: 0;
     position: absolute;
     flex-direction: column;
     display: flex;
     align-items: center;
-    border-radius: 10px;
     background: var(--standard-aware, #7da5a4);
     box-shadow: 0px 4px 8px 0x rgba(0, 0, 0, 0.25);
     z-index: 2;
-    margin-top: 800px;
+    margin-top: 500px;
   }
 
   .announcement {
@@ -366,21 +452,20 @@
     color: #fff;
     text-align: center;
     font-family: Adobe Garamond Pro;
-    font-size: 36px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 600;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
 
   #news {
     color: #fff;
     text-align: center;
     font-family: Adobe Garamond Pro;
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 600;
-    width: 80%;
   }
 
   .carousel {
@@ -407,32 +492,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 10px;
     background: var(--standard-aware, #7da5a4);
     border: 5px solid var(--standard-positive, #fff);
     color: var(--standard-aware, #fff);
     text-align: center;
-    padding: 15px;
+    padding: 7px;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: bold;
+    margin-top: 25px;
     cursor: pointer;
-    margin-top: 50px;
-    margin-bottom: 100px;
   }
 
   #learn:hover {
     background: var(--standard-aware, #fff);
     color: var(--standard-aware, #7da5a4);
     transition: 0.3s ease;
-    border-radius: 15px;
   }
 
   .dot {
-    width: 15px;
-    height: 15px;
-    border: solid 3px #dfdfdf;
+    width: 10px;
+    height: 10px;
+    border: solid 2px #dfdfdf;
     box-sizing: border-box;
     border-radius: 50px;
     flex-shrink: 0;
@@ -444,8 +527,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 0;
-    margin-bottom: 20px;
+    margin-top: 200px;
   }
 
   .active {
@@ -465,25 +547,25 @@
   #parent {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
     width: 100%;
     background-color: #fafafa;
   }
 
   #item_0 {
-    font-size: 56px;
+    font-size: 40px;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    width: 100%;
-    height: 450px;
+    width: auto;
+    height: 400px;
     font-family: "Avenir";
     font-weight: bold;
     color: rgba(23, 23, 23, 1);
     background-color: #fafafa;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
   }
 
   .programs {
@@ -494,9 +576,7 @@
     justify-content: center;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 
   .programs2 {
@@ -507,9 +587,7 @@
     justify-content: center;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 
   .programs,
@@ -560,7 +638,7 @@
   }
 
   #whatoffer {
-    margin-bottom: 150px;
+    margin-bottom: 70px;
   }
 
   .offers {
@@ -569,7 +647,25 @@
     background-color: #ffffff;
     color: #000;
     font-family: Avenir;
-    font-size: 56px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .offers2 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+    font-family: Avenir;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     text-align: center;
@@ -581,31 +677,13 @@
     padding-top: 100px;
   }
 
-  .offers2 {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    color: #000;
-    font-family: Avenir;
-    font-size: 56px;
-    font-style: normal;
-    font-weight: 600;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding-top: 200px;
-  }
-
   .offers3 {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
     color: #000;
     font-family: Avenir;
-    font-size: 56px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     text-align: center;
@@ -614,15 +692,15 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .learning {
     position: relative;
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     height: 100%;
@@ -631,7 +709,7 @@
   .offertitle {
     color: #171717;
     font-family: Avenir;
-    font-size: 48px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 600;
     position: relative;
@@ -657,15 +735,14 @@
   .offerdes {
     color: #171717;
     font-family: Avenir;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    width: 500px;
+    width: 80%;
     margin-bottom: 40px;
   }
 
   .offerlearn {
-    margin-top: 40px;
     width: auto;
     padding: 20px;
     height: auto;
@@ -675,11 +752,11 @@
     color: var(--standard-positive, #fff);
     text-align: center;
     font-family: Avenir;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
     border: 0px;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .offerlearn:hover {
@@ -690,53 +767,49 @@
   }
 
   .offerimageparent {
-    width: 434px;
-    height: 434px;
+    width: 200px;
+    height: 200px;
     border-radius: 434px;
-    margin-right: 300px;
-    position: relative;
     background: #e0efef;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-bottom: 35px;
   }
 
   .offerimageparent2 {
-    width: 434px;
-    height: 434px;
+    width: 200px;
+    height: 200px;
     border-radius: 434px;
-    margin-left: 300px;
-    position: relative;
     background: #e0efef;
     justify-content: center;
     align-items: center;
     display: flex;
-    order: 2;
+    margin-bottom: 35px;
   }
 
   .offerimageparent3 {
-    width: 434px;
-    height: 434px;
+    width: 200px;
+    height: 200px;
     border-radius: 434px;
-    position: relative;
-    margin-right: 300px;
-    flex-direction: column;
     background: #e0efef;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     display: flex;
+    margin-bottom: 35px;
   }
 
   .offerimage {
-    width: 234px;
-    height: 234px;
+    width: 100px;
+    height: 100px;
     opacity: 0;
     transition: opacity 2s;
   }
 
   .offerimage2 {
-    width: 200px;
-    height: 200px;
+    width: 80px;
+    height: 80px;
     opacity: 0;
     transition: opacity 2s;
   }
@@ -747,12 +820,12 @@
     background: var(--standard-aware, #7da5a4);
     color: #000;
     font-family: Avenir;
-    font-size: 56px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 70px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -763,7 +836,7 @@
     color: #ffffff;
     text-align: center;
     font-family: Avenir;
-    font-size: 50px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -772,20 +845,20 @@
 
   .quoteby {
     margin-top: 30px;
-    margin-bottom: 50px;
     color: #ffffff;
     text-align: center;
     font-family: Avenir;
-    font-size: 40px;
+    font-size: 20px;
     font-style: italic;
     font-weight: 600;
     line-height: normal;
   }
 
   .quotebutton {
+    margin-top: 40px;
     width: auto;
-    padding: 20px;
     height: auto;
+    padding: 10px;
     border-radius: 15px;
     border: 5px solid var(--standard-positive, #fff);
     background: var(--standard-aware, #7da5a4);
@@ -793,7 +866,7 @@
     color: var(--standard-aware, #fff);
     text-align: center;
     font-family: Avenir;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 900;
     cursor: pointer;
     align-items: center;
@@ -808,16 +881,15 @@
 
   .reviewcontainer {
     width: 100%;
-    height: 650px;
+    height: 550px;
     background: var(--standard-aware, #f5f5f5);
     color: #000;
     font-family: Avenir;
-    font-size: 56px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     text-align: center;
-    padding-top: 100px;
-
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -829,14 +901,14 @@
     color: #171717;
     text-align: center;
     font-family: Avenir;
-    font-size: 60px;
+    font-size: 30px;
+    width: 90%;
     font-style: normal;
     font-weight: 600;
-    width: 90%;
   }
 
   .review {
-    animation: scroll 60s linear infinite;
+    animation: scroll 70s linear infinite;
     display: flex;
     width: calc(510px * 7);
   }
@@ -852,8 +924,8 @@
 
   .reviewimage {
     margin-top: 55px;
-    width: 450px;
-    height: 410px;
+    width: 350px;
+    height: 310px;
     padding: 30px;
   }
 
@@ -879,7 +951,7 @@
     color: #040404;
     text-align: center;
     font-family: Avenir;
-    font-size: 55px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 600;
     margin-bottom: 40px;
@@ -890,7 +962,7 @@
     color: #040404;
     text-align: center;
     font-family: Avenir;
-    font-size: 35px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 350;
     margin-bottom: 40px;
@@ -898,34 +970,34 @@
   }
 
   .subs {
-    width: 400px;
+    width: 70%;
     height: 60px;
     border-radius: 5px;
     border: 5px solid #cfcfcf;
     background: #fff;
-    padding: 30px;
+    padding: 10px;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-family: Avenir;
   }
 
   .subsbutton {
     margin-top: 30px;
-    width: 280px;
+    width: 200px;
     height: 70px;
     border-radius: 5px;
     background: var(--standard-aware, #006766);
     color: #fff;
     text-align: center;
     font-family: Avenir;
-    font-size: 25px;
+    font-size: 20px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
     border: 0px;
     cursor: pointer;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
@@ -947,22 +1019,23 @@
 
   .footercontainer {
     width: 100%;
-    height: 300px;
+    height: auto;
     background: var(--standard-aware, #2e2d2d);
     color: #ffffff;
-    padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
   }
 
   .footer {
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+    flex-direction: column;
   }
 
   .footertitle {
@@ -974,9 +1047,7 @@
     display: flex;
     flex-direction: column;
     width: auto;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 20px;
+    margin-top: 50px;
   }
 
   .footerpages {
@@ -987,6 +1058,7 @@
     font-weight: 1;
     margin-top: 10px;
     color: #ffffff5e;
+    justify-content: center;
   }
 
   .footerbottom {
@@ -998,14 +1070,16 @@
     flex-direction: column;
     font-family: Avenir;
     align-items: center;
+    font-size: 15px;
     justify-content: center;
     position: relative;
     display: flex;
+    margin-top: -5px;
   }
 
   #line3 {
-    width: 2px;
-    height: 241px;
+    width: 241px;
+    height: 2px;
     background: #ffffff6c;
     z-index: 2;
     flex-direction: column;
@@ -1013,7 +1087,7 @@
     justify-content: center;
     flex-shrink: 0;
     display: flex;
-    margin-left: 50px;
+    margin-top: 50px;
   }
 
   #address {
@@ -1030,5 +1104,11 @@
   .footerlink:hover {
     color: #ffffffab;
     transition: 0.3s ease;
+  }
+
+  a[href^="tel:"] {
+    color: inherit; /* Inherit the text color from the surrounding content */
+    text-decoration: none; /* Remove the underline */
+    /* Add any other desired styles, like font-weight or font-size */
   }
 }

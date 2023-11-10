@@ -89,7 +89,33 @@ phoneInput.addEventListener("input", function (e) {
 
 // Carousel
 var slideIndex = 1;
+var touchStartX = 0;
+var touchEndX = 0;
 showSlides(slideIndex);
+
+var announce = document.getElementById("announce");
+var wrapper = document.querySelector(".carousel-wrapper");
+// Touch start event listener
+announce.addEventListener("touchstart", function (event) {
+  touchStartX = event.touches[0].clientX;
+  wrapper.style.transition = "none";
+});
+
+announce.addEventListener("touchmove", function (event) {
+  var touchCurrentX = event.touches[0].clientX;
+  var touchDeltaX = touchCurrentX - touchStartX;
+  var slideOffset =
+    (slideIndex - 1) * -100 + (touchDeltaX / wrapper.clientWidth) * 100;
+  wrapper.style.transform = `translateX(${slideOffset}%)`;
+  event.preventDefault();
+});
+
+// Touch end event listener
+announce.addEventListener("touchend", function (event) {
+  touchEndX = event.changedTouches[0].clientX;
+  handleSwipe();
+  wrapper.style.transition = "transform 0.5s ease";
+});
 
 function plusSlides(n) {
   showSlides((slideIndex += n));
@@ -122,5 +148,53 @@ function showSlides(n) {
   }
   dots[slideIndex - 1].classList.add("active");
 }
+function handleSwipe() {
+  var swipeThreshold = 50; // Adjust this value as needed
 
+  // Calculate the horizontal swipe distance
+  var swipeDistance = touchEndX - touchStartX;
 
+  if (Math.abs(swipeDistance) < swipeThreshold) {
+    // If the swipe distance is less than the threshold, reset the position
+    wrapper.style.transform = `translateX(${(slideIndex - 1) * -100}%)`;
+  } else {
+    if (swipeDistance > 0) {
+      // Swipe left, go to the previous slide
+      plusSlides(-1);
+    } else {
+      // Swipe right, go to the next slide
+      plusSlides(1);
+    }
+  }
+}
+
+// Disable Scroll
+// JavaScript to handle menu toggle and scrolling
+document.addEventListener("DOMContentLoaded", function () {
+  var menuToggle = document.getElementById("menu__toggle");
+  var menuBox = document.querySelector(".menu__box");
+
+  menuToggle.addEventListener("change", function () {
+    if (menuToggle.checked) {
+      // Show the menu by moving it to the right (0%)
+      menuBox.style.right = "0%";
+    } else {
+      // Hide the menu by moving it to the right (-100%)
+      menuBox.style.right = "-100%";
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var menuItems = document.querySelectorAll(".menu__item");
+
+  menuItems.forEach(function (menuItem) {
+    menuItem.addEventListener("click", function () {
+      var subMenu = this.querySelector(".sub-menu");
+      if (subMenu) {
+        subMenu.style.display =
+          subMenu.style.display === "block" ? "none" : "block";
+      }
+    });
+  });
+});
