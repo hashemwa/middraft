@@ -12,7 +12,9 @@ function isInViewport(element) {
 
 // Function for the fade-in effect
 function handleFadeIn() {
-  const elements = document.querySelectorAll(".offerimage, .offerimage2");
+  const elements = document.querySelectorAll(
+    ".quote, .quoteby, .quotebutton, .offerimage, .offerimage2"
+  );
   elements.forEach((element) => {
     if (isInViewport(element)) {
       element.style.opacity = 1;
@@ -27,7 +29,9 @@ window.addEventListener("scroll", handleFadeIn);
 window.addEventListener("load", handleFadeIn);
 
 // Get the elements with class "programs" and "programs2"
-const programElements = document.querySelectorAll(".programs, .programs2");
+const programElements = document.querySelectorAll(
+  ".programs, .programs2, .learning"
+);
 
 // Function to check if an element is in the viewport
 function isInViewport(element) {
@@ -90,29 +94,52 @@ phoneInput.addEventListener("input", function (e) {
 // Carousel
 var slideIndex = 1;
 var touchStartX = 0;
+var touchStartY = 0;
 var touchEndX = 0;
+var touchEndY = 0;
 showSlides(slideIndex);
 
 var announce = document.getElementById("announce");
 var wrapper = document.querySelector(".carousel-wrapper");
+var hyperlinks = document.querySelectorAll("a");
+
 // Touch start event listener
 announce.addEventListener("touchstart", function (event) {
   touchStartX = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
   wrapper.style.transition = "none";
+});
+
+// Prevent default behavior for touchstart on hyperlinks
+hyperlinks.forEach(function (link) {
+  link.addEventListener("touchmove", function (event) {
+    event.preventDefault();
+  });
 });
 
 announce.addEventListener("touchmove", function (event) {
   var touchCurrentX = event.touches[0].clientX;
+  var touchCurrentY = event.touches[0].clientY;
   var touchDeltaX = touchCurrentX - touchStartX;
+  var touchDeltaY = touchCurrentY - touchStartY;
+
+  // Check if vertical scrolling distance is greater than horizontal
+  if (Math.abs(touchDeltaY) > Math.abs(touchDeltaX)) {
+    // Allow vertical scrolling
+    return;
+  }
+
+  event.preventDefault();
+
   var slideOffset =
     (slideIndex - 1) * -100 + (touchDeltaX / wrapper.clientWidth) * 100;
   wrapper.style.transform = `translateX(${slideOffset}%)`;
-  event.preventDefault();
 });
 
 // Touch end event listener
 announce.addEventListener("touchend", function (event) {
   touchEndX = event.changedTouches[0].clientX;
+  touchEndY = event.changedTouches[0].clientY;
   handleSwipe();
   wrapper.style.transition = "transform 0.5s ease";
 });
@@ -148,6 +175,7 @@ function showSlides(n) {
   }
   dots[slideIndex - 1].classList.add("active");
 }
+
 function handleSwipe() {
   var swipeThreshold = 50; // Adjust this value as needed
 
@@ -168,33 +196,35 @@ function handleSwipe() {
   }
 }
 
-// Disable Scroll
-// JavaScript to handle menu toggle and scrolling
-document.addEventListener("DOMContentLoaded", function () {
-  var menuToggle = document.getElementById("menu__toggle");
-  var menuBox = document.querySelector(".menu__box");
-
-  menuToggle.addEventListener("change", function () {
-    if (menuToggle.checked) {
-      // Show the menu by moving it to the right (0%)
-      menuBox.style.right = "0%";
-    } else {
-      // Hide the menu by moving it to the right (-100%)
-      menuBox.style.right = "-100%";
-    }
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function () {
   var menuItems = document.querySelectorAll(".menu__item");
 
-  menuItems.forEach(function (menuItem) {
-    menuItem.addEventListener("click", function () {
-      var subMenu = this.querySelector(".sub-menu");
-      if (subMenu) {
-        subMenu.style.display =
-          subMenu.style.display === "block" ? "none" : "block";
+  menuItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var nestedMenu = this.nextElementSibling;
+
+      if (nestedMenu.classList.contains("nested-menu-visible")) {
+        nestedMenu.classList.remove("nested-menu-visible");
+        this.classList.remove("active-arrow");
+      } else {
+        // Hide any other open nested menus
+        closeAllNestedMenus();
+        nestedMenu.classList.add("nested-menu-visible");
+        this.classList.add("active-arrow");
       }
     });
   });
+
+  function closeAllNestedMenus() {
+    var allNestedMenus = document.querySelectorAll(".nested-menu");
+    var allMenuItems = document.querySelectorAll(".menu__item");
+
+    allNestedMenus.forEach(function (menu) {
+      menu.classList.remove("nested-menu-visible");
+    });
+
+    allMenuItems.forEach(function (item) {
+      item.classList.remove("active-arrow");
+    });
+  }
 });

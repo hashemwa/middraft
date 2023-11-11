@@ -2,48 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>MID</title>
     <link href="https://fonts.cdnfonts.com/css/avenir" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preload" href="style.css" as="style"/>
-    <link rel="stylesheet" href="stylemobile.css" />
-    <link rel="preload" href="stylemobile.css" as="style"/>
+    <link rel="stylesheet" href="desktop.css" />
+    <link rel="preload" href="desktop.css" as="style"/>
+    <link rel="stylesheet" href="mobile.css" />
+    <link rel="preload" href="mobile.css" as="style"/>
+    <link rel="stylesheet" href="small.css" />
+    <link rel="preload" href="small.css" as="style"/>
+    <link rel="stylesheet" href="tablet.css" />
+    <link rel="preload" href="tablet.css" as="style"/>
   </head>
   <body style="background-color: #171717">
+    <div class="overlay">
     <div id="nav">
       <div class="hamburger-menu">
         <input id="menu__toggle" type="checkbox" />
         <label class="menu__btn" for="menu__toggle">
-          <span></span>
+            <span></span>
         </label>
         <ul class="menu__box">
-          <li><a class="menu__item">Programs</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/alimprogram">Alim</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/sanatain">Essentials</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/quranacademy">Quran Academy</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/tafseer">Women's Tafseer</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/gateway">Gateway to Learning</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/discourses">Spiritual Discourse</a>
-          </li>
-          <li><a class="menu__item">Services</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/counseling">Counseling</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/zakat">Zakat</a>
-          </li>
-          <li><a class="menu__item">Tuition</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/tuition">Alim</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/tuition#:~:text=Other-,Sanatain%20Program,-Tuition%20for%20the">Essentials</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/tuition#:~:text=Other-,Quran%20Academy,-Tuition%20for%20the">Hifdh</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/tuition#:~:text=Other-,Introduction%20to%20Hifdh,-Tuition%20for%20the">Intro Hifdh</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/tuition#:~:text=Other-,Gateway%20to%20Learning,-Tuition%20for%20the">Pre-Alim</a>
-          </li>
-          <li><a class="menu__item" href="#">About</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/alimprogram">Mission</a>
-            <a class="menu__item2" href="https://www.marylandinstitute.org/sanatain">Faculty</a>
-          </li>
-          <li><a class="menu__item" href="#">Contact</a></li>
+            <li><a class="menu__item">Programs <img id="arrow2" src="./assets/arrow.svg" /></a>
+                <ul class="nested-menu">
+                  <li><a class="menu__item2" href="https://www.marylandinstitute.org/gateway">Pre-Alim</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/alimprogram">Alim</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/sanatain">Essentials</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/quranacademy">Quran Academy</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/discourses">Spiritual Discourses</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/tafseer">Women's Tafseer</a></li>
+                </ul>
+            </li>
+            <li><a class="menu__item">Services <img id="arrow2" src="./assets/arrow.svg" /></a>
+                <ul class="nested-menu">
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/counseling">Counseling</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/zakat">Zakat</a></li>
+                </ul>
+            </li>
+            <li><a class="menu__item">Tuition <img id="arrow2" src="./assets/arrow.svg" /></a>
+                <ul class="nested-menu">
+                  <li><a class="menu__item2" href="https://www.marylandinstitute.org/gateway">Pre-Alim</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/alimprogram">Alim</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/sanatain">Essentials</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/quranacademy">Hifdh</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/discourses">Intro Hifdh</a></li>
+                    <li><a class="menu__item2" href="https://www.marylandinstitute.org/tafseer">Women's Tafseer</a></li>
+                </ul>
+            </li>
+            <li><a class="menu__item">About <img id="arrow2" src="./assets/arrow.svg" /></a>
+                <ul class="nested-menu">
+                  <li><a class="menu__item2" href="https://www.marylandinstitute.org/counseling">Mission</a></li>
+                  <li><a class="menu__item2" href="https://www.marylandinstitute.org/zakat">Faculty</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.marylandinstitute.org/donate"><button id="donate2">DONATE</button></a></li>
         </ul>
-      </div>
+    </div>
       <a href="index.html" id="logolink"><img id="logo" src="./assets/logo.png" /></a>
       <div id="title">Maryland Institute of Development</div>
       <div id="title2">MID</div>
@@ -54,6 +68,9 @@
           </div>
           <ul class="dropdown">
             <li>
+              <a href="https://www.marylandinstitute.org/gateway">Pre-Alim</a>
+            </li>
+            <li>
               <a href="https://www.marylandinstitute.org/alimprogram">Alim</a>
             </li>
             <li>
@@ -63,13 +80,10 @@
               <a href="https://www.marylandinstitute.org/quranacademy">Quran Academy</a>
             </li>
             <li>
+              <a href="https://www.marylandinstitute.org/discourses">Spiritual Discourses</a>
+            </li>
+            <li>
               <a href="https://www.marylandinstitute.org/tafseer">Women's Tafseer</a>
-            </li>
-            <li>
-              <a href="https://www.marylandinstitute.org/gateway">Pre-Alim</a>
-            </li>
-            <li>
-              <a href="https://www.marylandinstitute.org/discourses">Spiritual Discourse</a>
             </li>
           </ul>
         </div>
@@ -92,6 +106,9 @@
           </div>
           <ul class="dropdown">
             <li>
+              <a href="https://www.marylandinstitute.org/gateway">Pre-Alim</a>
+            </li>
+            <li>
               <a href="https://www.marylandinstitute.org/alimprogram">Alim</a>
             </li>
             <li>
@@ -102,9 +119,6 @@
             </li>
             <li>
               <a href="https://www.marylandinstitute.org/tafseer">Intro Hifdh</a>
-            </li>
-            <li>
-              <a href="https://www.marylandinstitute.org/gateway">Pre-Alim</a>
             </li>
           </ul>
         </div>
@@ -121,12 +135,8 @@
             <li><a href="https://www.marylandinstitute.org/zakat">Faculty</a></li>
           </ul>
         </div>
-          <a href="https://www.marylandinstitute.org/aboutus"
-          ><div class="navcontent">Contact</div></a>
       </div>
-      <a href="https://www.marylandinstitute.org/donate"
-          ><button id="donate">DONATE</button></a
-        >
+      <a href="https://www.marylandinstitute.org/donate"><button id="donate">DONATE</button></a>
     </div>
     <div id="container">
       <div id="banner">
@@ -170,7 +180,103 @@
     </div>
     <div id="item_0">Our Programs</div>
     <div id="frame">
+      <div id="parent2">
+        <div class="programs">
+          <img
+            class="pic"
+            src="./assets/image-5-iyY.png"
+            alt="Image"
+          />
+          <p class="programtitle">PRE-ALIM</p>
+          <p class="programcontent">
+            Learn the prerequisites of the Alim Program over the summer. The
+            course is open to everyone. Classes are held on Sundays and weekday
+            nights.
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/gateway">Learn More</a>
+        </div>
+        <div class="programs2">
+          <img
+            class="pic"
+            src="./assets/adobestock141928410-1.png"
+            alt="Image"
+          />
+          <p class="programtitle">ALIM</p>
+          <p class="programcontent">
+            A part-time traditional Islamic studies curriculum for men and
+            women. Classes are held on Sundays and weekday nights.
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/alimprogram">Learn More</a>
+        </div>
+      </div>
+      <div id="parent2">
+        <div class="programs">
+          <img
+            class="pic"
+            src="./assets/adobestock60557501-1.png"
+            alt="Image"
+          />
+          <p class="programtitle">ESSENTIALS</p>
+          <p class="programcontent">
+            A two year part-time program for men and women focusing on the
+            Islamic essentials. Classes are held on Sundays and weekday nights.
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/sanatain">Learn More</a>
+        </div>
+        <div class="programs2">
+          <img
+            class="pic"
+            src="./assets/adobestock343841806-1.png"
+            alt="Image"
+          />
+          <p class="programtitle">QURAN ACADEMY</p>
+          <p class="programcontent">
+            A full-time Hifdh program for boys and girls. Classes are held on
+            Monday-Friday. A part-time Introduction to Hifdh program is held in the morning.
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/quranacademy">Learn More</a>
+        </div>
+      </div>
+      <div id="parent2">
+        <div class="programs">
+          <img class="pic" src="./assets/adobestock621459324-1.png" alt="Image" />
+          <p class="programtitle">SPIRITUAL DISCOURSES</p>
+          <p class="programcontent">
+            A weekly discussion for men and women about spiritual diseases and
+            their cure. Classes are held on Tuesday nights. Anyone can join for
+            free!
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/discourses">Learn More</a>
+        </div>
+        <div class="programs2">
+          <img
+            class="pic"
+            src="./assets/adobestock6241340-1.png"
+            alt="Image"
+          />
+          <p class="programtitle">WOMEN'S TAFSEER</p>
+          <p class="programcontent">
+            A weekly class for women covering the exegesis of the Quran. Classes
+            are held on Tuesdays from 7 to 9 PM. Anyone can join for free!
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/tafseer">Learn More</a>
+        </div>
+      </div>
       <div id="parent">
+        <div class="programs">
+          <img
+            class="pic"
+            src="./assets/image-5-iyY.png"
+            alt="Image"
+          />
+          <p class="programtitle">PRE-ALIM</p>
+          <p class="programcontent">
+            Learn the prerequisites of the Alim Program over the summer. The
+            course is open to everyone. Classes are held on Sundays and weekday
+            nights.
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/gateway">Learn More</a>
+        </div>
         <div class="programs">
           <img
             class="pic"
@@ -197,7 +303,9 @@
           </p>
           <a class="learnmore" href="https://www.marylandinstitute.org/sanatain">Learn More</a>
         </div>
-        <div class="programs">
+      </div>
+      <div id="parent">
+        <div class="programs2">
           <img
             class="pic"
             src="./assets/adobestock343841806-1.png"
@@ -210,33 +318,8 @@
           </p>
           <a class="learnmore" href="https://www.marylandinstitute.org/quranacademy">Learn More</a>
         </div>
-      </div>
-      <div id="parent">
         <div class="programs2">
-          <img class="pic" src="./assets/adobestock6241340-1.png" alt="Image" />
-          <p class="programtitle">WOMEN'S TAFSEER</p>
-          <p class="programcontent">
-            A weekly class for women covering the exegesis of the Quran. Classes
-            are held on Tuesdays from 7 to 9 PM. Anyone can join for free!
-          </p>
-          <a class="learnmore" href="https://www.marylandinstitute.org/tafseer">Learn More</a>
-        </div>
-        <div class="programs2">
-          <img class="pic" src="./assets/image-5-iyY.png" alt="Image" />
-          <p class="programtitle">PRE-ALIM</p>
-          <p class="programcontent">
-            Learn the prerequisites of the Alim Program over the summer. The
-            course is open to everyone. Classes are held on Sundays and weekday
-            nights.
-          </p>
-          <a class="learnmore" href="https://www.marylandinstitute.org/gateway">Learn More</a>
-        </div>
-        <div class="programs2">
-          <img
-            class="pic"
-            src="./assets/adobestock621459324-1.png"
-            alt="Image"
-          />
+          <img class="pic" src="./assets/adobestock621459324-1.png" alt="Image" />
           <p class="programtitle">SPIRITUAL DISCOURSES</p>
           <p class="programcontent">
             A weekly discussion for men and women about spiritual diseases and
@@ -244,6 +327,19 @@
             free!
           </p>
           <a class="learnmore" href="https://www.marylandinstitute.org/discourses">Learn More</a>
+        </div>
+        <div class="programs2">
+          <img
+            class="pic"
+            src="./assets/adobestock6241340-1.png"
+            alt="Image"
+          />
+          <p class="programtitle">WOMEN'S TAFSEER</p>
+          <p class="programcontent">
+            A weekly class for women covering the exegesis of the Quran. Classes
+            are held on Tuesdays from 7 to 9 PM. Anyone can join for free!
+          </p>
+          <a class="learnmore" href="https://www.marylandinstitute.org/tafseer">Learn More</a>
         </div>
       </div>
     </div>
@@ -388,7 +484,7 @@
           <div class="footerpages"><a class="footerlink" href="https://www.marylandinstitute.org/quranacademy">Quran Academy</a></div>
           <div class="footerpages"><a class="footerlink" href="https://www.marylandinstitute.org/tafseer">Women's Tafseer</a></div>
           <div class="footerpages"><a class="footerlink" href="https://www.marylandinstitute.org/gateway">Pre-Alim</a></div>
-          <div class="footerpages"><a class="footerlink" href="https://www.marylandinstitute.org/discourses">Spiritual Discourses</a></div>
+          <div class="footerpages"><a class="footerlink" href="https://www.marylandinstitute.org/discourses">Spiritual Discourse</a></div>
         </div>
         <div class="footertitle">SERVICES
           <div class="footerpages"><a class="footerlink" href="https://www.marylandinstitute.org/counseling">Counseling</a></div>
@@ -416,6 +512,7 @@
     </div>
   </div>
   <div class="footerbottom">© 2023 Maryland Institute of Development</div>
+</div>
     <script src="mid.js"></script>
   </body>
 </html>
