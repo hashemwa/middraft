@@ -317,7 +317,7 @@
     background: var(--standard-aware, #006766);
     color: #fff;
     text-align: center;
-    padding: 10px 30px;
+    padding: 15px 30px;
     font-family: Avenir;
     font-size: 18px;
     font-style: normal;
@@ -620,7 +620,7 @@
     align-items: flex-end;
     justify-content: center;
     text-align: center;
-    width: auto;
+    width: 95%;
     height: 400px;
     font-family: "Avenir";
     font-weight: bold;
@@ -654,7 +654,7 @@
   .programs,
   .programs2 {
     transition: transform 0.7s, opacity 0.7s; /* Add a smooth transition effect */
-    width: 270px;
+    width: 250px;
     max-width: 100%;
   }
 
@@ -663,8 +663,8 @@
   }
 
   .pic {
-    width: 270px;
-    height: 160px;
+    width: 250px;
+    height: 140px;
   }
 
   .programtitle {
@@ -678,7 +678,7 @@
 
   .programcontent {
     font-size: 18px;
-    width: 95%;
+    width: 90%;
     font-family: "Avenir";
     color: rgba(23, 23, 23, 1);
     margin-top: 25px;
@@ -703,6 +703,7 @@
   #whatoffer {
     margin-bottom: 70px;
     font-size: 35px;
+    width: 94%;
   }
 
   .offers {
@@ -776,7 +777,7 @@
     color: #171717;
     font-family: Avenir;
     font-size: 28px;
-    width: 95%;
+    width: 94%;
     font-style: normal;
     font-weight: 600;
     position: relative;
@@ -957,7 +958,7 @@
 
   .reviewcontainer {
     width: 100%;
-    height: 550px;
+    height: auto;
     background: var(--standard-aware, #f5f5f5);
     color: #000;
     font-family: Avenir;
@@ -966,6 +967,7 @@
     font-weight: 600;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -977,7 +979,7 @@
     color: #171717;
     text-align: center;
     font-family: Avenir;
-    font-size: 30px;
+    font-size: 25px;
     width: 90%;
     font-style: normal;
     font-weight: 600;
@@ -1000,9 +1002,10 @@
 
   .reviewimage {
     margin-top: 55px;
-    width: 350px;
-    height: 310px;
-    padding: 30px;
+    width: 300px;
+    height: 260px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .subscontainer {
@@ -1135,7 +1138,7 @@
     margin-top: 10px;
     color: #ffffff5e;
     justify-content: center;
-    width: 100%;
+    width: 95%;
   }
 
   .footerbottom {
@@ -1197,5 +1200,160 @@
     opacity: 0;
     transform: translateY(20%);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 249px) {
+  .menu__item {
+    font-size: 20px;
+  }
+  .menu__item2 {
+    font-size: 15px;
+  }
+  #donate2 {
+    font-size: 15px;
+  }
+  #nurture {
+    font-size: 16px;
+  }
+  #describ {
+    font-size: 13px;
+  }
+  #weekly {
+    font-size: 20px;
+  }
+
+  #news {
+    font-size: 15px;
+  }
+
+  #announce {
+    margin-top: 500px;
+  }
+
+  #learn {
+    font-size: 12px;
+  }
+  #item_0 {
+    font-size: 25px;
+  }
+  .programs,
+  .programs2 {
+    width: 190px;
+  }
+
+  .pic {
+    width: 190px;
+    height: 100px;
+  }
+  .programtitle {
+    font-size: 18px;
+  }
+
+  .programcontent {
+    font-size: 15px;
+    width: 170px;
+  }
+  .learnmore {
+    font-size: 15px;
+  }
+
+  .offers {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+    font-family: Avenir;
+    font-size: 25px;
+  }
+
+  .offerimageparent {
+    width: 150px;
+    height: 150px;
+  }
+
+  .offerimageparent2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .offerimageparent3 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .offerimage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .offerimage2 {
+    width: 60px;
+    height: 60px;
+  }
+  #whatoffer {
+    font-size: 30px;
+  }
+  .offertitle {
+    font-size: 25px;
+  }
+
+  .line2 {
+    width: 120px;
+  }
+
+  .offerdes {
+    font-size: 18px;
+  }
+
+  .offerlearn {
+    padding: 13px;
+    font-size: 18px;
+  }
+  .footertitle {
+    font-size: 17px;
+  }
+
+  .footerpages {
+    font-size: 13px;
+    width: 95%;
+  }
+
+  .footerbottom {
+    font-size: 13px;
+  }
+
+  #line3 {
+    width: 170px;
+  }
+  .subsbutton {
+    width: 170px;
+    font-size: 15px;
+    padding: 12px;
+  }
+  .substitle {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .programs,
+  .programs2 {
+    transition: transform 0.7s, opacity 0.7s; /* Add a smooth transition effect */
+    width: 300px;
+    max-width: 100%;
+  }
+
+  .pic {
+    width: 300px;
+    height: 190px;
+  }
+
+  .programcontent {
+    width: 85%;
+  }
+  .reviewimage {
+    width: 350px;
+    height: 310px;
   }
 }

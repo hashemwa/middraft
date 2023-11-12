@@ -317,9 +317,9 @@
     background: var(--standard-aware, #006766);
     color: #fff;
     text-align: center;
-    padding: 10px 30px;
+    padding: 15px 30px;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 25px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -382,7 +382,7 @@
     color: #fff;
     text-align: center;
     font-family: Avenir;
-    font-size: 21px;
+    font-size: 22px;
     font-style: normal;
     font-weight: bold;
     position: relative;
@@ -411,10 +411,10 @@
 
   #describ {
     color: #fff;
-    width: 90%;
+    width: 91%;
     text-align: center;
     font-family: Avenir;
-    font-size: 15px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     position: relative;
@@ -682,202 +682,6 @@
     margin-top: 25px;
   }
 
-  @media (min-width: 500px) and (max-width: 700px) {
-    .subs {
-      max-width: 50%;
-      width: 400px;
-      height: 60px;
-      border-radius: 5px;
-      border: 5px solid #cfcfcf;
-      background: #fff;
-      padding: 10px;
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 20px;
-      font-family: Avenir;
-    }
-
-    #title {
-      color: #fff;
-      font-family: Avenir;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: bold;
-      line-height: normal;
-      margin-right: 50px;
-      white-space: nowrap;
-      display: flex;
-    }
-
-    #title2 {
-      display: none;
-    }
-    .programcontent {
-      font-size: 25px;
-      width: 400px;
-      font-family: "Avenir";
-      color: rgba(23, 23, 23, 1);
-      margin-top: 25px;
-    }
-
-    .pic {
-      width: 450px;
-      height: 340px;
-    }
-
-    .programs,
-    .programs2 {
-      transition: transform 0.7s, opacity 0.7s; /* Add a smooth transition effect */
-      width: 450px;
-      max-width: 100%;
-    }
-
-    .programtitle {
-      font-size: 30px;
-      width: auto;
-      font-family: "Avenir";
-      font-weight: Bold;
-      color: rgba(23, 23, 23, 1);
-      margin-top: 30px;
-    }
-
-    .offertitle {
-      color: #dd1b1b;
-      font-family: Avenir;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 600;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #item_0 {
-      font-size: 45px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      width: auto;
-      height: 400px;
-      font-family: "Avenir";
-      font-weight: bold;
-      color: rgba(23, 23, 23, 1);
-      background-color: #fafafa;
-      padding-bottom: 70px;
-    }
-
-    #nurture {
-      color: #fff;
-      text-align: center;
-      font-family: Avenir;
-      font-size: 25px;
-      font-style: normal;
-      font-weight: bold;
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 500px;
-      max-width: 95%;
-    }
-
-    #line {
-      width: 200px;
-      height: 5px;
-      background: var(--standard-produce, #6ecfce);
-      z-index: 2;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      display: flex;
-      margin-top: 16px;
-      margin-bottom: 16px;
-    }
-
-    #describ {
-      color: #fff;
-      width: 90%;
-      text-align: center;
-      font-family: Avenir;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 500;
-      position: relative;
-      line-height: normal;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      z-index: 2;
-      flex-direction: column;
-    }
-
-    #announce {
-      box-sizing: border-box;
-      width: 100%;
-      height: 250px;
-      flex-shrink: 0;
-      position: absolute;
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      background: var(--standard-aware, #7da5a4);
-      box-shadow: 0px 4px 8px 0x rgba(0, 0, 0, 0.25);
-      z-index: 2;
-      margin-top: 500px;
-    }
-
-    #weekly {
-      color: #fff;
-      text-align: center;
-      font-family: Adobe Garamond Pro;
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 600;
-      margin-top: 30px;
-    }
-
-    #news {
-      color: #fff;
-      text-align: center;
-      font-family: Adobe Garamond Pro;
-      font-size: 25px;
-      font-style: italic;
-      font-weight: 600;
-      margin-top: 20px;
-    }
-
-    #learn {
-      width: auto;
-      height: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      background: var(--standard-aware, #7da5a4);
-      border: 5px solid var(--standard-positive, #fff);
-      color: var(--standard-aware, #fff);
-      text-align: center;
-      padding: 7px;
-      font-family: Avenir;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: bold;
-      margin-top: 30px;
-      cursor: pointer;
-    }
-
-    #learn:hover {
-      background: var(--standard-aware, #fff);
-      color: var(--standard-aware, #7da5a4);
-      transition: 0.3s ease;
-    }
-  }
-
   .learnmore {
     font-size: 18px;
     width: auto;
@@ -994,7 +798,7 @@
   .offerdes {
     color: #171717;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 500;
     width: 80%;
@@ -1026,8 +830,8 @@
   }
 
   .offerimageparent {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 434px;
     background: #e0efef;
     justify-content: center;
@@ -1037,8 +841,8 @@
   }
 
   .offerimageparent2 {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 434px;
     background: #e0efef;
     justify-content: center;
@@ -1048,8 +852,8 @@
   }
 
   .offerimageparent3 {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 434px;
     background: #e0efef;
     flex-direction: column;
@@ -1060,15 +864,15 @@
   }
 
   .offerimage {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     opacity: 0;
     transition: opacity 2s;
   }
 
   .offerimage2 {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     opacity: 0;
     transition: opacity 2s;
   }
@@ -1095,7 +899,7 @@
     color: #ffffff;
     text-align: center;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -1109,7 +913,7 @@
     color: #ffffff;
     text-align: center;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 22px;
     font-style: italic;
     font-weight: 600;
     line-height: normal;
@@ -1146,7 +950,7 @@
 
   .reviewcontainer {
     width: 100%;
-    height: 550px;
+    height: auto;
     background: var(--standard-aware, #f5f5f5);
     color: #000;
     font-family: Avenir;
@@ -1155,6 +959,7 @@
     font-weight: 600;
     text-align: center;
     padding-top: 50px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1189,9 +994,10 @@
 
   .reviewimage {
     margin-top: 55px;
-    width: 350px;
-    height: 310px;
-    padding: 30px;
+    width: 370px;
+    height: 330px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .subscontainer {
@@ -1235,15 +1041,16 @@
   }
 
   .subs {
-    width: 70%;
+    max-width: 70%;
+    width: 300px;
     height: 60px;
     border-radius: 5px;
     border: 5px solid #cfcfcf;
     background: #fff;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: Avenir;
   }
 
@@ -1306,7 +1113,7 @@
   .footertitle {
     color: #ffffffa6;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 23px;
     font-style: normal;
     font-weight: 200;
     display: flex;
@@ -1317,7 +1124,7 @@
 
   .footerpages {
     display: flex;
-    font-size: 15px;
+    font-size: 18px;
     font-family: Avenir;
     font-style: normal;
     font-weight: 1;
@@ -1328,22 +1135,24 @@
 
   .footerbottom {
     width: 100%;
-    height: 50px;
+    height: auto;
     background: var(--standard-aware, #171717);
     color: #ffffffc0;
     display: flex;
     flex-direction: column;
     font-family: Avenir;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
     justify-content: center;
     position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
     display: flex;
     margin-top: -5px;
   }
 
   #line3 {
-    width: 241px;
+    width: 250px;
     height: 2px;
     background: #ffffff6c;
     z-index: 2;
@@ -1358,7 +1167,7 @@
   #address {
     color: #ffffffa6;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 23px;
     margin-top: 30px;
   }
 
@@ -1381,5 +1190,302 @@
     opacity: 0;
     transform: translateY(20%);
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+  .subs {
+    max-width: 50%;
+    width: 400px;
+    height: 60px;
+    border-radius: 5px;
+    border: 5px solid #cfcfcf;
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-family: Avenir;
+  }
+
+  #title {
+    color: #fff;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin-right: 50px;
+    white-space: nowrap;
+    display: flex;
+  }
+
+  #title2 {
+    display: none;
+  }
+  .programcontent {
+    font-size: 25px;
+    width: 400px;
+    font-family: "Avenir";
+    color: rgba(23, 23, 23, 1);
+    margin-top: 25px;
+  }
+
+  .learnmore {
+    font-size: 25px;
+  }
+
+  .pic {
+    width: 450px;
+    height: 340px;
+  }
+
+  .programs,
+  .programs2 {
+    transition: transform 0.7s, opacity 0.7s; /* Add a smooth transition effect */
+    width: 450px;
+    max-width: 100%;
+  }
+
+  .programtitle {
+    font-size: 30px;
+    width: auto;
+    font-family: "Avenir";
+    font-weight: Bold;
+    color: rgba(23, 23, 23, 1);
+    margin-top: 30px;
+  }
+
+  .offertitle {
+    font-family: Avenir;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #item_0 {
+    font-size: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: auto;
+    height: 450px;
+    font-family: "Avenir";
+    font-weight: bold;
+    color: rgba(23, 23, 23, 1);
+    background-color: #fafafa;
+    padding-bottom: 70px;
+  }
+
+  #nurture {
+    color: #fff;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    max-width: 95%;
+  }
+
+  #line {
+    width: 200px;
+    height: 5px;
+    background: var(--standard-produce, #6ecfce);
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  #describ {
+    color: #fff;
+    width: 90%;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    position: relative;
+    line-height: normal;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+  }
+
+  #announce {
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    flex-shrink: 0;
+    position: absolute;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background: var(--standard-aware, #7da5a4);
+    box-shadow: 0px 4px 8px 0x rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    margin-top: 500px;
+  }
+
+  #weekly {
+    color: #fff;
+    text-align: center;
+    font-family: Adobe Garamond Pro;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  #news {
+    color: #fff;
+    text-align: center;
+    font-family: Adobe Garamond Pro;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+    margin-top: 20px;
+  }
+
+  #learn {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: var(--standard-aware, #7da5a4);
+    border: 5px solid var(--standard-positive, #fff);
+    color: var(--standard-aware, #fff);
+    text-align: center;
+    padding: 7px;
+    font-family: Avenir;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+
+  #learn:hover {
+    background: var(--standard-aware, #fff);
+    color: var(--standard-aware, #7da5a4);
+    transition: 0.3s ease;
+  }
+  #whatoffer {
+    font-size: 50px;
+  }
+  .offerdes {
+    font-size: 30px;
+  }
+  .offerimageparent {
+    width: 250px;
+    height: 250px;
+  }
+
+  .offerimageparent2 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .offerimageparent3 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .offerimage {
+    width: 140px;
+    height: 140px;
+  }
+
+  .offerimage2 {
+    width: 110px;
+    height: 110px;
+  }
+  .line2 {
+    width: 150px;
+  }
+  .quote {
+    font-size: 35px;
+  }
+
+  .quoteby {
+    font-size: 30px;
+  }
+
+  .quotebutton {
+    font-size: 30px;
+  }
+
+  .reviewtitle {
+    font-size: 45px;
+  }
+  .reviewimage {
+    width: 450px;
+    height: 410px;
+  }
+  .offerlearn {
+    font-size: 30px;
+  }
+  .substitle {
+    font-size: 50px;
+  }
+
+  .subssubtitle {
+    font-size: 35px;
+  }
+
+  .subs {
+    max-width: 90%;
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .subsbutton {
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    padding: 20px;
+  }
+  .footertitle {
+    font-size: 30px;
+  }
+
+  .footerpages {
+    font-size: 25px;
+  }
+
+  .footerbottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 23px;
+  }
+
+  #line3 {
+    width: 350px;
+  }
+
+  #address {
+    font-size: 30px;
   }
 }
