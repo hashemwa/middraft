@@ -111,6 +111,7 @@
     justify-content: center;
     transition-duration: 0.25s;
     align-items: center;
+    cursor: pointer;
   }
 
   .menu__item2 {

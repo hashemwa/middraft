@@ -1517,4 +1517,7 @@
     font-size: 35px;
     padding: 25px;
   }
+  .nested-menu.nested-menu-visible {
+    max-height: 330px;
+  }
 }
