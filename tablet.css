@@ -1,4 +1,4 @@
-@media (min-width: 701px) and (max-width: 1367px) {
+@media (min-width: 701px) and (max-width: 1365px) {
   * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@
     opacity: 0;
     list-style: none;
     padding: 0;
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
   }
 
   .menu__item.active-arrow #arrow2 {
@@ -1314,7 +1314,7 @@
   }
 }
 
-@media (min-width: 1001px) and (max-width: 1367px) {
+@media (min-width: 1001px) and (max-width: 1365px) {
   #banner {
     height: 450px;
   }

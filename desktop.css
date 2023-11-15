@@ -1,4 +1,4 @@
-@media (min-width: 1368px) {
+@media (min-width: 1366px) {
   * {
     margin: 0;
     padding: 0;
@@ -184,6 +184,7 @@
     line-height: normal;
     border: 0px;
     cursor: pointer;
+    transition: 0.3s ease;
   }
 
   #donate:hover {
@@ -231,6 +232,32 @@
     box-sizing: border-box;
   }
 
+  #banneralim {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("./assets/alim4k.jpg");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #banneralim:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
   #banner:before {
     content: "";
     position: absolute;
@@ -239,6 +266,24 @@
     background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
     pointer-events: none;
     z-index: 1;
+  }
+
+  #nurturealim {
+    color: #fff;
+    text-align: center;
+    font-family: Adobe Garamond Pro;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1150px;
+    max-width: 90%;
+    margin-top: 100px;
   }
 
   #nurture {
@@ -256,6 +301,20 @@
     justify-content: center;
     width: 1150px;
     max-width: 90%;
+  }
+
+  #linealim {
+    width: 300px;
+    height: 8px;
+    background: var(--standard-produce, #6ecfce);
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
   }
 
   #line {
@@ -531,8 +590,8 @@
   }
 
   .pic {
-    width: 405px;
-    height: 295px;
+    width: 380px;
+    height: 270px;
   }
 
   .programtitle {
@@ -571,6 +630,23 @@
   #whatoffer {
     margin-bottom: 150px;
     font-size: 65px;
+  }
+
+  .alimcontainer {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+    font-family: Avenir;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 
   .offers {
@@ -640,6 +716,813 @@
     transition: transform 0.7s, opacity 0.7s;
   }
 
+  .learningalim {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1500px;
+    height: 100%;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    border-top: 2px solid #cdd4d4;
+    z-index: 3;
+  }
+
+  .learningalim2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1500px;
+    height: 100%;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    border-top: 2px solid #cdd4d4;
+  }
+
+  .alimtitle {
+    color: #171717;
+    font-family: Adobe Garamond Pro;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-button {
+    position: fixed; /* Set to fixed */
+    cursor: pointer;
+    scale: 1.5;
+    display: flex;
+    right: 120px;
+  }
+
+  @keyframes scaleIn {
+    from {
+      scale: 0;
+    }
+    to {
+      scale: 1;
+    }
+  }
+
+  @keyframes scaleOut {
+    from {
+      scale: 1;
+    }
+    to {
+      scale: 0;
+    }
+  }
+
+  .course-content {
+    display: none;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.3s ease-in-out;
+    overflow-y: scroll;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+  }
+
+  .course-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .course-content {
+    -ms-overflow-style: none;
+  }
+  .course {
+    color: #171717;
+    transition: 0.3s ease;
+  }
+
+  .course:hover {
+    color: #e67d54;
+    transition: 0.3s ease;
+  }
+
+  .dropdownlevel {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel3 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel4 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel5 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel6 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel7 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel8 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  @keyframes fadeInOut {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes translateIn {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .bookpic {
+    width: 170px;
+    height: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .bookpic:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
+    scale: 1.1;
+    transition: 0.3s ease;
+  }
+
+  .dropdownbook {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook3 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook4 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook5 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook6 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook7 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook8 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height1 0.5s ease;
+    height: 400px;
+  }
+
+  @keyframes height1 {
+    from {
+      height: 350px;
+    }
+    to {
+      height: 400px;
+    }
+  }
+
+  .dropdownlevel2.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height2 0.5s ease;
+    height: 450px;
+  }
+
+  @keyframes height2 {
+    from {
+      height: 400px;
+    }
+    to {
+      height: 450px;
+    }
+  }
+
+  .dropdownlevel3.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height3 0.5s ease;
+    height: 450px;
+  }
+
+  @keyframes height3 {
+    from {
+      height: 400px;
+    }
+    to {
+      height: 450px;
+    }
+  }
+
+  .dropdownlevel4.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height4 0.5s ease;
+    height: 650px;
+  }
+
+  @keyframes height4 {
+    from {
+      height: 450px;
+    }
+    to {
+      height: 650px;
+    }
+  }
+
+  .dropdownlevel5.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height5 0.5s ease;
+    height: 600px;
+  }
+
+  @keyframes height5 {
+    from {
+      height: 650px;
+    }
+    to {
+      height: 600px;
+    }
+  }
+
+  .dropdownlevel6.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height6 0.5s ease;
+    height: 450px;
+  }
+
+  @keyframes height6 {
+    from {
+      height: 600px;
+    }
+    to {
+      height: 450px;
+    }
+  }
+
+  .dropdownlevel7.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height7 0.5s ease;
+    height: 350px;
+  }
+
+  @keyframes height7 {
+    from {
+      height: 450px;
+    }
+    to {
+      height: 350px;
+    }
+  }
+
+  .dropdownlevel8.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height8 0.5s ease;
+    height: 350px;
+  }
+
+  @keyframes height8 {
+    from {
+      height: 300px;
+    }
+    to {
+      height: 350px;
+    }
+  }
+
+  .dropdownlevel.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+  .dropdownlevel2.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel3.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel4.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel5.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel6.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel7.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel8.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook2.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook3.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook4.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook5.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+  .dropdownbook6.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook7.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook8.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+  }
+
+  .dropdownbook.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+  .dropdownbook2.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook3.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook4.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook5.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook6.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook7.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook8.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .level1 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level1:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+
+  .level2 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level2:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  .level3 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level3:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  .level4 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level4:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  .level5 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level5:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  .level6 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level6:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  .level7 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level7:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+  .level8 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: hsl(187, 35%, 47%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    transition: 0.3s ease;
+  }
+
+  .level8:hover {
+    color: hsl(187, 35%, 47%);
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+  }
+
   .offertitle {
     color: #171717;
     font-family: Avenir;
@@ -666,10 +1549,23 @@
     margin-bottom: 35px;
   }
 
+  .line2alim {
+    width: 100px;
+    height: 8px;
+    background: var(--standard-produce, #6ecfce);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
   .offerdes {
     color: #171717;
     font-family: Avenir;
-    font-size: 37px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 500;
     width: 700px;
@@ -677,8 +1573,89 @@
     margin-bottom: 40px;
   }
 
+  .alimdes {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    width: 70%;
+    margin-bottom: 150px;
+    line-height: 50px;
+  }
+
+  .alimdes2 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    width: 65%;
+    margin-bottom: 150px;
+  }
+
+  .alimdes3 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 50px;
+  }
+
+  .register {
+    margin-top: 50px;
+    width: auto;
+    padding: 25px;
+    height: auto;
+    border-radius: 5px;
+    background: var(--standard-aware, #006766);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+    color: var(--standard-positive, #fff);
+    text-align: center;
+    font-family: Avenir;
+    font-size: 25px;
+    font-weight: 900;
+    border: 0px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: 0.3s ease;
+  }
+  .register:hover {
+    background: var(--standard-aware, #ffffff);
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.3);
+    color: var(--standard-positive, #006766);
+    transition: 0.3s ease;
+  }
+
+  .schedule {
+    margin-top: 50px;
+    width: auto;
+    padding: 15px;
+    height: auto;
+    border-radius: 5px;
+    background: var(--standard-aware, hsl(187, 35%, 47%));
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+    color: var(--standard-positive, #fff);
+    text-align: center;
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 900;
+    border: 0px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .schedule:hover {
+    background: var(--standard-aware, #ffffff);
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+    color: var(--standard-positive, hsl(187, 35%, 47%));
+    transition: 0.3s ease;
+  }
+
   .offerlearn {
-    margin-top: 40px;
+    margin-top: 25px;
     width: auto;
     padding: 25px;
     height: auto;
@@ -703,8 +1680,8 @@
   }
 
   .offerimageparent {
-    width: 434px;
-    height: 434px;
+    width: 400px;
+    height: 400px;
     border-radius: 434px;
     margin-right: 300px;
     position: relative;
@@ -715,8 +1692,8 @@
   }
 
   .offerimageparent2 {
-    width: 434px;
-    height: 434px;
+    width: 400px;
+    height: 400px;
     border-radius: 434px;
     margin-left: 300px;
     position: relative;
@@ -728,8 +1705,8 @@
   }
 
   .offerimageparent3 {
-    width: 434px;
-    height: 434px;
+    width: 400px;
+    height: 400px;
     border-radius: 434px;
     position: relative;
     margin-right: 300px;
@@ -741,15 +1718,15 @@
   }
 
   .offerimage {
-    width: 234px;
-    height: 234px;
+    width: 220px;
+    height: 220px;
     opacity: 0;
     transition: opacity 2s;
   }
 
   .offerimage2 {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     opacity: 0;
     transition: opacity 2s;
   }
@@ -1042,7 +2019,7 @@
   #address {
     color: #ffffffa6;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 30px;
   }
 
@@ -1054,7 +2031,59 @@
     color: #ffffffab;
     transition: 0.3s ease;
   }
-
-  
 }
 
+@media (min-width: 1366px) and (max-width: 1600px) {
+  .offertitle {
+    font-size: 45px;
+  }
+  .line2 {
+    width: 200px;
+  }
+  .offerdes {
+    font-size: 30px;
+    width: 600px;
+  }
+
+  .offerlearn {
+    width: auto;
+    padding: 25px;
+    font-size: 30px;
+  }
+
+  .offerimageparent {
+    width: 350px;
+    height: 350px;
+    margin-right: 150px;
+  }
+
+  .offerimageparent2 {
+    width: 350px;
+    height: 350px;
+    margin-left: 150px;
+  }
+
+  .offerimageparent3 {
+    width: 350px;
+    height: 350px;
+    margin-right: 150px;
+  }
+
+  .offerimage {
+    width: 200px;
+    height: 180px;
+  }
+
+  .offerimage2 {
+    width: 150px;
+    height: 150px;
+  }
+  .navcontent {
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+  .pic {
+    width: 380px;
+    height: 270px;
+  }
+}
