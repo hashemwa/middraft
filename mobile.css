@@ -19,6 +19,7 @@
     list-style: none;
     padding: 0;
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 99;
   }
 
   .menu__item.active-arrow #arrow2 {
@@ -56,7 +57,7 @@
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 4;
+    z-index: 5;
   }
   .menu__btn > span,
   .menu__btn > span::before,
@@ -92,7 +93,7 @@
     background-color: #171717;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.5s;
-    z-index: 3;
+    z-index: 4;
   }
 
   .menu__box::-webkit-scrollbar {
@@ -427,6 +428,1292 @@
     flex-direction: column;
   }
 
+  #banneressentials:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #banneressentials {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("./assets/4ksan.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  .alimdes {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    width: 80%;
+    height: 100%;
+    margin-bottom: 150px;
+    line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+  }
+
+  .alimdes2 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    width: 65%;
+    margin-bottom: 150px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+  }
+
+  .alimdes3 {
+    display: none;
+  }
+
+  .alimdes4 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .alimdesm {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+  }
+
+  #banneralim:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #banneralim {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("./assets/alim4k.jpg");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #banneressentials:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #banneressentials {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("./assets/4ksan.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #bannerquran:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #bannerquran {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("./assets/quran.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #bannerpre:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #bannerpre {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("./assets/pre.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #bannerabout {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("./assets/image-4-bg.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+  }
+
+  #bannerabout:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #nurturealim {
+    color: #fff;
+    text-align: center;
+    font-family: Adobe Garamond Pro;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1150px;
+    max-width: 90%;
+  }
+
+  #linealim {
+    width: 200px;
+    height: 8px;
+    background: var(--standard-produce, #6ecfce);
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .alimcontainer {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    color: #000;
+    font-family: Avenir;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .learningalim {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    border-top: 2px solid #cdd4d4;
+    z-index: 3;
+  }
+
+  .learningalim2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
+    padding-top: 140px;
+    padding-bottom: 50px;
+    border-top: 2px solid #cdd4d4;
+  }
+
+  .learningalim3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    z-index: 3;
+  }
+
+  .alimtitle {
+    color: #171717;
+    font-family: Adobe Garamond Pro;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s;
+  }
+  .line2alim {
+    width: 100px;
+    height: 8px;
+    background: var(--standard-produce, #6ecfce);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s;
+  }
+
+  .tuitiontitle {
+    font-size: 35px;
+    margin-top: 50px;
+  }
+
+  .paydes {
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    font-family: Avenir;
+  }
+
+  .paycontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .learnmorepay {
+    font-size: 15px;
+    width: auto;
+    font-family: "Avenir";
+    font-weight: Medium;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background: var(--standard-aware, #0daaaf);
+  }
+
+  .learnmorepay:hover {
+    color: #0daaaf;
+    transition: 0.3s ease;
+    background: white;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
+  }
+
+  .pay {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 70px;
+  }
+
+  .pay:hover {
+    background-color: #006766;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid #006766;
+    transition: 0.3s ease;
+  }
+
+  .register {
+    margin-top: 50px;
+    width: auto;
+    padding: 20px;
+    height: auto;
+    border-radius: 5px;
+    background: var(--standard-aware, #006766);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+    color: var(--standard-positive, #fff);
+    text-align: center;
+    font-family: Avenir;
+    font-size: 25px;
+    font-weight: 900;
+    border: 0px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    transition: 0.3s ease;
+  }
+  .register:hover {
+    background: var(--standard-aware, #ffffff);
+    box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.3);
+    color: var(--standard-positive, #006766);
+    transition: 0.3s ease;
+  }
+
+  .schedule {
+    margin-top: 50px;
+    width: auto;
+    padding: 10px 20px;
+    height: auto;
+    background: var(--standard-aware, #ffffff);
+    color: var(--standard-positive, #006766);
+    text-align: center;
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .schedule:hover {
+    background: var(--standard-aware, #006766);
+    color: var(--standard-positive, hsl(0, 0%, 100%));
+    transition: 0.3s ease;
+    border: 2px solid #006766;
+  }
+
+  .level1,
+  .level2,
+  .level3,
+  .level4,
+  .level5,
+  .level6,
+  .level7,
+  .level8 {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    position: relative;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .level1:hover,
+  .level2:hover,
+  .level3:hover,
+  .level4:hover,
+  .level5:hover,
+  .level6:hover,
+  .level7:hover,
+  .level8:hover {
+    background-color: #006766;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid #006766;
+    transition: 0.3s ease;
+  }
+
+  .level1m,
+  .level2m,
+  .level3m,
+  .level4m,
+  .level5m,
+  .level6m,
+  .level7m,
+  .level8m {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    position: relative;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .book1m,
+  .book2m,
+  .book3m,
+  .book4m,
+  .book5m,
+  .book6m,
+  .book7m,
+  .book8m {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    position: relative;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  #level1m,
+  #level2m,
+  #level3m,
+  #level4m,
+  #level5m,
+  #level6m,
+  #level7m,
+  #level8m {
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+  #donate3 {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background: var(--standard-aware, #006766);
+    color: #fff;
+    text-align: center;
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    border: 0px;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: 0.3s ease;
+    margin-top: 40px;
+  }
+
+  .book,
+  .book1,
+  .book2,
+  .book3,
+  .book4,
+  .book5,
+  .book6,
+  .book7,
+  .book8 {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .book:hover,
+  .book1:hover,
+  .book2:hover,
+  .book3:hover,
+  .book4:hover,
+  .book5:hover,
+  .book6:hover,
+  .book7:hover,
+  .book8:hover {
+    background-color: #006766;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid #006766;
+    transition: 0.3s ease;
+  }
+
+  .highlighted {
+    color: hsl(0, 0%, 100%);
+    background-color: #006766;
+    border: 2px solid #006766;
+    transition: 0.3s ease;
+  }
+
+  .close-button {
+    position: fixed; /* Set to fixed */
+    cursor: pointer;
+    scale: 1.5;
+    display: flex;
+    right: 120px;
+  }
+
+  @keyframes scaleIn {
+    from {
+      scale: 0;
+    }
+    to {
+      scale: 1;
+    }
+  }
+
+  @keyframes scaleOut {
+    from {
+      scale: 1;
+    }
+    to {
+      scale: 0;
+    }
+  }
+
+  .course-content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .course-content {
+    -ms-overflow-style: none;
+  }
+
+  .course1 {
+    position: relative;
+    color: #006766;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 20px;
+  }
+
+  .course {
+    position: relative;
+    color: #006766;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  .dropdownquran {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownquran2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevelm {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevelm2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel3 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel4 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel5 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel6 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel7 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownlevel8 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  @keyframes fadeInOut {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes translateIn {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .bookpic {
+    width: 170px;
+    height: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin-top: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+
+  .bookpic:hover {
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.35);
+    scale: 1.1;
+    transition: 0.3s ease;
+  }
+
+  .dropdownbook {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook3 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook4 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook5 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook6 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook7 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownbook8 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownquran.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, heightq 0.5s ease;
+    height: 250px;
+    background-color: #ffffff;
+  }
+
+  .dropdownquran2.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, heightq2 0.5s ease;
+    height: 200px;
+    background-color: #ffffff;
+  }
+
+  .dropdownlevel.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height1 0.5s ease;
+    height: 470px;
+    background-color: #ffffff;
+  }
+
+  .dropdownlevelm.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, heightm 0.5s ease;
+    height: 420px;
+    background-color: #ffffff;
+  }
+
+  @keyframes heightq {
+    from {
+      height: 230px;
+    }
+    to {
+      height: 250px;
+    }
+  }
+
+  @keyframes heightq2 {
+    from {
+      height: 180px;
+    }
+    to {
+      height: 200px;
+    }
+  }
+
+  @keyframes heightm {
+    from {
+      height: 370px;
+    }
+    to {
+      height: 420px;
+    }
+  }
+
+  @keyframes height1 {
+    from {
+      height: 420px;
+    }
+    to {
+      height: 470px;
+    }
+  }
+
+  .dropdownlevel2.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height2 0.5s ease;
+    height: 520px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height2 {
+    from {
+      height: 470px;
+    }
+    to {
+      height: 520px;
+    }
+  }
+
+  .dropdownlevel3.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height3 0.5s ease;
+    height: 520px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height3 {
+    from {
+      height: 470px;
+    }
+    to {
+      height: 520px;
+    }
+  }
+
+  .dropdownlevel4.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height4 0.5s ease;
+    height: 720px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height4 {
+    from {
+      height: 670px;
+    }
+    to {
+      height: 720px;
+    }
+  }
+
+  .dropdownlevel5.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height5 0.5s ease;
+    height: 670px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height5 {
+    from {
+      height: 620px;
+    }
+    to {
+      height: 670px;
+    }
+  }
+
+  .dropdownlevel6.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height6 0.5s ease;
+    height: 520px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height6 {
+    from {
+      height: 470px;
+    }
+    to {
+      height: 520px;
+    }
+  }
+
+  .dropdownlevel7.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height7 0.5s ease;
+    height: 470px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height7 {
+    from {
+      height: 420px;
+    }
+    to {
+      height: 470px;
+    }
+  }
+
+  .dropdownlevel8.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, height8 0.5s ease;
+    height: 520px;
+    background-color: #ffffff;
+  }
+
+  @keyframes height8 {
+    from {
+      height: 470px;
+    }
+    to {
+      height: 520px;
+    }
+  }
+
+  .dropdownquran.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+
+  .dropdownquran2.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+
+  .dropdownlevelm.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+
+  .dropdownlevel.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+  .dropdownlevel2.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel3.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel4.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel5.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel6.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel7.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownlevel8.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook2.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook3.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook4.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook5.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+  .dropdownbook6.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook7.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook8.active {
+    display: block;
+    animation: fadeInOut 0.5s ease;
+    height: 400px;
+    background-color: #ffffff;
+    overflow-y: scroll;
+  }
+
+  .dropdownbook.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+  .dropdownbook2.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook3.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook4.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook5.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook6.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook7.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
+  .dropdownbook8.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse;
+    height: 0; /* Reverse the animation for closing */
+  }
+
   .prev,
   .next {
     cursor: pointer;
@@ -684,6 +1971,7 @@
   }
 
   .learnmore {
+    position: relative;
     font-size: 18px;
     width: auto;
     font-family: "Avenir";
@@ -692,11 +1980,24 @@
     margin-top: 50px;
     margin-bottom: 25px;
     cursor: pointer;
+    transition: color 0.3s ease;
+    overflow: hidden;
   }
 
-  .learnmore:hover {
-    color: rgb(236, 129, 6);
-    transition: 0.3s ease;
+  .learnmore::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: rgb(13, 170, 175);
+    transition: width 0.3s ease;
+  }
+
+  .learnmore:hover::before {
+    width: 100%;
   }
 
   #whatoffer {
@@ -903,7 +2204,7 @@
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 1.5;
     width: 90%;
     opacity: 0;
     transition: opacity 2s;

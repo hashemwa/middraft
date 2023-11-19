@@ -28,7 +28,7 @@ window.addEventListener("load", handleFadeIn);
 
 // Get the elements with class "programs" and "programs2"
 const programElements = document.querySelectorAll(
-  ".programs, .programs2, .learning, .quote, .quoteby, .quotebutton"
+  ".alimtitle, .line2alim, .line2about, .alimdes, .alimdes2, .alimdes3, .alimdes4, .alimdes5, .alimdesm, .linefaculty, .quote, .quoteby"
 );
 
 // Function to check if an element is in the viewport
@@ -89,111 +89,6 @@ phoneInput.addEventListener("input", function (e) {
   phoneInput.value = formattedValue;
 });
 
-// Carousel
-var slideIndex = 1;
-var touchStartX = 0;
-var touchStartY = 0;
-var touchEndX = 0;
-var touchEndY = 0;
-showSlides(slideIndex);
-
-var announce = document.getElementById("announce");
-var wrapper = document.querySelector(".carousel-wrapper");
-var hyperlinks = document.querySelectorAll("a");
-
-// Touch start event listener
-announce.addEventListener("touchstart", function (event) {
-  touchStartX = event.touches[0].clientX;
-  touchStartY = event.touches[0].clientY;
-  wrapper.style.transition = "none";
-});
-
-// Prevent default behavior for touchstart on hyperlinks
-hyperlinks.forEach(function (link) {
-  link.addEventListener("touchmove", function (event) {
-    event.preventDefault();
-  });
-});
-
-announce.addEventListener("touchmove", function (event) {
-  var touchCurrentX = event.touches[0].clientX;
-  var touchCurrentY = event.touches[0].clientY;
-  var touchDeltaX = touchCurrentX - touchStartX;
-  var touchDeltaY = touchCurrentY - touchStartY;
-
-  // Check if vertical scrolling distance is greater than horizontal
-  if (Math.abs(touchDeltaY) > Math.abs(touchDeltaX)) {
-    // Allow vertical scrolling
-    return;
-  }
-
-  event.preventDefault();
-
-  var slideOffset =
-    (slideIndex - 1) * -100 + (touchDeltaX / wrapper.clientWidth) * 100;
-  wrapper.style.transform = `translateX(${slideOffset}%)`;
-});
-
-// Touch end event listener
-announce.addEventListener("touchend", function (event) {
-  touchEndX = event.changedTouches[0].clientX;
-  touchEndY = event.changedTouches[0].clientY;
-  handleSwipe();
-  wrapper.style.transition = "transform 0.5s ease";
-});
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("carousel");
-  var wrapper = document.querySelector(".carousel-wrapper");
-  var dots = document.getElementsByClassName("dot");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  // Calculate the slide offset based on the current slide index
-  var slideOffset = (slideIndex - 1) * -100;
-  wrapper.style.transform = `translateX(${slideOffset}%)`;
-
-  // Highlight the active dot
-  for (i = 0; i < dots.length; i++) {
-    dots[i].classList.remove("active");
-  }
-  dots[slideIndex - 1].classList.add("active");
-}
-
-function handleSwipe() {
-  var swipeThreshold = 50; // Adjust this value as needed
-
-  // Calculate the horizontal swipe distance
-  var swipeDistance = touchEndX - touchStartX;
-
-  if (Math.abs(swipeDistance) < swipeThreshold) {
-    // If the swipe distance is less than the threshold, reset the position
-    wrapper.style.transform = `translateX(${(slideIndex - 1) * -100}%)`;
-  } else {
-    if (swipeDistance > 0) {
-      // Swipe left, go to the previous slide
-      plusSlides(-1);
-    } else {
-      // Swipe right, go to the next slide
-      plusSlides(1);
-    }
-  }
-}
-
 document.addEventListener("DOMContentLoaded", function () {
   var menuItems = document.querySelectorAll(".menu__item");
 
@@ -226,3 +121,68 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+function toggleDropdown(id) {
+  var selectedDropdown = document.getElementById(id);
+
+  // Check if the clicked item is already active
+  if (selectedDropdown.classList.contains("active")) {
+    // Add 'closing' class to apply the closing animation
+    selectedDropdown.classList.add("closing");
+
+    // Remove 'active' class after a delay to allow the animation to finish
+    setTimeout(function () {
+      selectedDropdown.classList.remove("active", "closing");
+    }, 1000); // The delay should match the duration of the animation
+
+    // Remove the highlighted class for all buttons
+    var buttons = document.querySelectorAll(
+      ".level1, .level2, .level3, .level4, .level5, .level6, .level7, .level8, " +
+        ".book1, .book2, .book3, .book4, .book5, .book6, .book7, .book8, " +
+        ".level1m, .level2m, .level3m, .level4m, .level5m, .level6m, .level7m, .level8m, " +
+        ".book1m, .book2m, .book3m, .book4m, .book5m, .book6m, .book7m, .book8m"
+    );
+    buttons.forEach(function (button) {
+      button.classList.remove("highlighted");
+    });
+  } else {
+    // Hide all dropdowns and remove 'active' class
+    var dropdowns = document.querySelectorAll(
+      ".dropdownlevel, .dropdownlevel2, .dropdownlevel3, .dropdownlevel4, .dropdownlevel5, .dropdownlevel6, .dropdownlevel7, .dropdownlevel8, " +
+        ".dropdownbook, .dropdownbook2, .dropdownbook3, .dropdownbook4, .dropdownbook5, .dropdownbook6, .dropdownbook7, .dropdownbook8, " +
+        ".dropdownquran, .dropdownquran2, .dropdownlevelm"
+    );
+    dropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove("active");
+    });
+
+    // Show the selected dropdown
+    selectedDropdown.classList.add("active");
+
+    // Remove the highlighted class for all buttons
+    var buttons = document.querySelectorAll(
+      ".level1, .level2, .level3, .level4, .level5, .level6, .level7, .level8, " +
+        ".book1, .book2, .book3, .book4, .book5, .book6, .book7, .book8, " +
+        ".level1m, .level2m, .level3m, .level4m, .level5m, .level6m, .level7m, .level8m, " +
+        ".book1m, .book2m, .book3m, .book4m, .book5m, .book6m, .book7m, .book8m"
+    );
+    buttons.forEach(function (button) {
+      button.classList.remove("highlighted");
+    });
+
+    // Add the highlighted class for the clicked button
+    var button = document.querySelector("." + id);
+    button.classList.add("highlighted");
+  }
+}
+
+function toggleCourse(courseId) {
+  var courseContent = document.getElementById(courseId + "-content");
+  courseContent.style.display =
+    courseContent.style.display === "block" ? "none" : "block";
+}
+
+function closeCourse(courseId) {
+  var courseContent = document.getElementById(courseId + "-content");
+  courseContent.style.display = "none";
+}

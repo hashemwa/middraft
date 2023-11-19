@@ -156,7 +156,7 @@
 
   ul li a {
     display: block;
-    padding: 20px 25px;
+    padding: 20px 20px;
     color: #fff;
     text-decoration: none;
     text-align: center;
@@ -193,6 +193,68 @@
     transition: 0.3s ease;
   }
 
+  #donate3 {
+    margin-top: 50px;
+    width: auto;
+    padding: 15px 30px;
+    height: auto;
+    background: var(--standard-aware, #ffffff);
+    color: var(--standard-positive, #006766);
+    text-align: center;
+    font-family: Avenir;
+    font-size: 25px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  #donate3:hover {
+    background: var(--standard-aware, #006766);
+    color: var(--standard-positive, hsl(0, 0%, 100%));
+    transition: 0.3s ease;
+    border: 2px solid #006766;
+  }
+
+  #social {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    filter: invert(92%) sepia(0%) saturate(2543%) hue-rotate(317deg)
+      brightness(84%) contrast(78%);
+  }
+
+  #social:hover {
+    filter: invert(1);
+    transition: 0.3s ease;
+  }
+
+  #donate4 {
+    margin-top: 50px;
+    width: auto;
+    padding: 15px 30px;
+    height: auto;
+    background: var(--standard-aware, #ffffff);
+    color: var(--standard-positive, #006766);
+    text-align: center;
+    font-family: Avenir;
+    font-size: 25px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  #donate4:hover {
+    background: var(--standard-aware, #006766);
+    color: var(--standard-positive, hsl(0, 0%, 100%));
+    transition: 0.3s ease;
+    border: 2px solid #006766;
+  }
+
   #navgroup {
     display: flex;
     align-items: center;
@@ -216,6 +278,16 @@
     justify-content: center;
   }
 
+  #banner:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
   #banner {
     align-items: center;
     justify-content: center;
@@ -223,22 +295,6 @@
     width: 100%;
     height: 900px;
     background-image: url("./assets/image-4-bg.png");
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: center; /* Center the image within the container */
-    background-size: 100% 100%;
-    display: flex;
-    flex-direction: column;
-    background-attachment: fixed;
-    box-sizing: border-box;
-  }
-
-  #banneralim {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-image: url("./assets/alim4k.jpg");
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center; /* Center the image within the container */
     background-size: 100% 100%;
@@ -258,7 +314,118 @@
     z-index: 1;
   }
 
-  #banner:before {
+  #banneralim {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("./assets/alim4k.jpg");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #banneressentials:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #banneressentials {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("./assets/4ksan.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #bannerquran:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #bannerquran {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("./assets/quran.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #bannerpre:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.637), rgba(0, 0, 0, 0.521));
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #bannerpre {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("./assets/pre.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+  }
+
+  #bannerabout {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url("./assets/image-4-bg.png");
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+  }
+
+  #bannerabout:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -476,14 +643,15 @@
     border: 5px solid var(--standard-positive, #fff);
     color: var(--standard-aware, #fff);
     text-align: center;
-    padding: 20px 30px;
+    padding: 15px 25px;
     font-family: Avenir;
-    font-size: 18px;
+    font-size: 20px;
     font-style: normal;
     font-weight: bold;
     cursor: pointer;
     margin-top: 50px;
     margin-bottom: 70px;
+    transition: 0.3s ease;
   }
 
   #learn:hover {
@@ -605,13 +773,14 @@
 
   .programcontent {
     font-size: 20px;
-    width: 350px;
+    width: 355px;
     font-family: "Avenir";
     color: rgba(23, 23, 23, 1);
     margin-top: 25px;
   }
 
   .learnmore {
+    position: relative;
     font-size: 18px;
     width: auto;
     font-family: "Avenir";
@@ -620,11 +789,46 @@
     margin-top: 50px;
     margin-bottom: 25px;
     cursor: pointer;
+    transition: color 0.3s ease;
+    overflow: hidden;
   }
 
-  .learnmore:hover {
-    color: rgb(236, 129, 6);
+  .learnmore::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px; /* Adjust the thickness of the underline */
+    background-color: rgb(13, 170, 175);
+    transition: width 0.3s ease;
+  }
+
+  .learnmore:hover::before {
+    width: 100%;
+  }
+
+  .learnmorepay {
+    font-size: 20px;
+    width: auto;
+    font-family: "Avenir";
+    font-weight: Medium;
+    color: rgb(255, 255, 255);
+    margin-top: 50px;
+    margin-bottom: 100px;
+    cursor: pointer;
     transition: 0.3s ease;
+    padding: 15px 30px;
+    border-radius: 5px;
+    background: var(--standard-aware, #0daaaf);
+  }
+
+  .learnmorepay:hover {
+    color: #0daaaf;
+    transition: 0.3s ease;
+    background: white;
+    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.25);
   }
 
   #whatoffer {
@@ -725,9 +929,8 @@
     justify-content: center;
     width: 1500px;
     height: 100%;
-    opacity: 0;
     transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 50px;
     border-top: 2px solid #cdd4d4;
     z-index: 3;
@@ -742,11 +945,25 @@
     justify-content: center;
     width: 1500px;
     height: 100%;
-    opacity: 0;
     transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
-    padding-top: 100px;
+    padding-top: 140px;
     padding-bottom: 50px;
     border-top: 2px solid #cdd4d4;
+  }
+
+  .learningalim3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 1500px;
+    height: 100%;
+    transition: transform 0.7s, opacity 0.7s, height 0.7s ease;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    z-index: 3;
   }
 
   .alimtitle {
@@ -760,6 +977,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s;
   }
 
   .close-button {
@@ -788,24 +1007,6 @@
     }
   }
 
-  .course-content {
-    display: none;
-    position: absolute;
-    height: 60%;
-    width: 100%;
-    background-color: #f9f9f9;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    z-index: 99;
-    align-items: center;
-    justify-content: center;
-    animation: scaleIn 0.3s ease-in-out;
-    overflow-y: scroll;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    border-radius: 10px;
-  }
-
   .course-content::-webkit-scrollbar {
     display: none;
   }
@@ -813,14 +1014,38 @@
   .course-content {
     -ms-overflow-style: none;
   }
-  .course {
-    color: #171717;
-    transition: 0.3s ease;
+
+  .course1 {
+    position: relative;
+    color: #006766;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 30px;
   }
 
-  .course:hover {
-    color: #e67d54;
-    transition: 0.3s ease;
+  .course {
+    position: relative;
+    color: #006766;
+    text-decoration: none;
+    overflow: hidden;
+  }
+
+  .dropdownquran {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .dropdownquran2 {
+    display: none;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
+    animation: fadeInOut 0.5s ease;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
   }
 
   .dropdownlevel {
@@ -962,7 +1187,7 @@
   .dropdownbook4 {
     display: none;
     overflow: hidden;
-    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
     animation: fadeInOut 0.5s ease;
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -971,7 +1196,7 @@
   .dropdownbook5 {
     display: none;
     overflow: hidden;
-    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
     animation: fadeInOut 0.5s ease;
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -980,7 +1205,7 @@
   .dropdownbook6 {
     display: none;
     overflow: hidden;
-    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
     animation: fadeInOut 0.5s ease;
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -989,7 +1214,7 @@
   .dropdownbook7 {
     display: none;
     overflow: hidden;
-    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
     animation: fadeInOut 0.5s ease;
     background-color: #ffffff;
     border: 1px solid #ffffff;
@@ -998,76 +1223,113 @@
   .dropdownbook8 {
     display: none;
     overflow: hidden;
-    transition: opacity 0.5s ease, transform 0.5s ease, height 1s ease;
+    transition: opacity 0.3s ease, transform 0.5s ease, height 1s ease;
     animation: fadeInOut 0.5s ease;
     background-color: #ffffff;
     border: 1px solid #ffffff;
   }
 
+  .dropdownquran.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, heightq 0.5s ease;
+    height: 250px;
+    background-color: #ffffff;
+  }
+
+  .dropdownquran2.active {
+    display: block;
+    animation: fadeInOut 0.5s ease, heightq2 0.5s ease;
+    height: 200px;
+    background-color: #ffffff;
+  }
+
   .dropdownlevel.active {
     display: block;
     animation: fadeInOut 0.5s ease, height1 0.5s ease;
-    height: 400px;
+    height: 500px;
+    background-color: #ffffff;
+  }
+
+  @keyframes heightq {
+    from {
+      height: 230px;
+    }
+    to {
+      height: 250px;
+    }
+  }
+
+  @keyframes heightq2 {
+    from {
+      height: 180px;
+    }
+    to {
+      height: 200px;
+    }
   }
 
   @keyframes height1 {
     from {
-      height: 350px;
+      height: 450px;
     }
     to {
-      height: 400px;
+      height: 500px;
     }
   }
 
   .dropdownlevel2.active {
     display: block;
     animation: fadeInOut 0.5s ease, height2 0.5s ease;
-    height: 450px;
+    height: 550px;
+    background-color: #ffffff;
   }
 
   @keyframes height2 {
     from {
-      height: 400px;
+      height: 500px;
     }
     to {
-      height: 450px;
+      height: 550px;
     }
   }
 
   .dropdownlevel3.active {
     display: block;
     animation: fadeInOut 0.5s ease, height3 0.5s ease;
-    height: 450px;
+    height: 550px;
+    background-color: #ffffff;
   }
 
   @keyframes height3 {
     from {
-      height: 400px;
+      height: 500px;
     }
     to {
-      height: 450px;
+      height: 550px;
     }
   }
 
   .dropdownlevel4.active {
     display: block;
     animation: fadeInOut 0.5s ease, height4 0.5s ease;
-    height: 650px;
+    height: 750px;
+    background-color: #ffffff;
   }
 
   @keyframes height4 {
     from {
-      height: 450px;
+      height: 700px;
     }
     to {
-      height: 650px;
+      height: 750px;
     }
   }
 
   .dropdownlevel5.active {
     display: block;
     animation: fadeInOut 0.5s ease, height5 0.5s ease;
-    height: 600px;
+    height: 700px;
+    background-color: #ffffff;
   }
 
   @keyframes height5 {
@@ -1075,29 +1337,31 @@
       height: 650px;
     }
     to {
-      height: 600px;
+      height: 700px;
     }
   }
 
   .dropdownlevel6.active {
     display: block;
     animation: fadeInOut 0.5s ease, height6 0.5s ease;
-    height: 450px;
+    height: 550px;
+    background-color: #ffffff;
   }
 
   @keyframes height6 {
     from {
-      height: 600px;
+      height: 500px;
     }
     to {
-      height: 450px;
+      height: 550px;
     }
   }
 
   .dropdownlevel7.active {
     display: block;
     animation: fadeInOut 0.5s ease, height7 0.5s ease;
-    height: 350px;
+    height: 500px;
+    background-color: #ffffff;
   }
 
   @keyframes height7 {
@@ -1105,23 +1369,38 @@
       height: 450px;
     }
     to {
-      height: 350px;
+      height: 500px;
     }
   }
 
   .dropdownlevel8.active {
     display: block;
     animation: fadeInOut 0.5s ease, height8 0.5s ease;
-    height: 350px;
+    height: 550px;
+    background-color: #ffffff;
   }
 
   @keyframes height8 {
     from {
-      height: 300px;
+      height: 500px;
     }
     to {
-      height: 350px;
+      height: 550px;
     }
+  }
+
+  .dropdownquran.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
+  }
+
+  .dropdownquran2.closing {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInOut 0.5s ease reverse; /* Reverse the animation for closing */
+    height: 0;
   }
 
   .dropdownlevel.closing {
@@ -1281,221 +1560,126 @@
     height: 0; /* Reverse the animation for closing */
   }
 
-  .level1 {
-    color: #171717;
+  .paydes {
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-top: 70px;
     font-family: Avenir;
-    font-size: 30px;
+  }
+
+  .paycontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .paycontainer3 {
+    background-color: #006766;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    border: 10px solid #bbb6b6;
+    border-radius: 20px;
+  }
+
+  .pay {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 900;
     position: relative;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 10px;
     margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px 35px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
     cursor: pointer;
-    border: 1px solid;
+    transition: 0.3s ease;
+    width: 100px;
+  }
+
+  .pay:hover {
+    background-color: #006766;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid #006766;
     transition: 0.3s ease;
   }
 
-  .level1:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
-
-  .level2 {
-    color: #171717;
-    font-family: Avenir;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid;
-    transition: 0.3s ease;
-  }
-
-  .level2:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
-  .level3 {
-    color: #171717;
-    font-family: Avenir;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid;
-    transition: 0.3s ease;
-  }
-
-  .level3:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
-  .level4 {
-    color: #171717;
-    font-family: Avenir;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid;
-    transition: 0.3s ease;
-  }
-
-  .level4:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
-  .level5 {
-    color: #171717;
-    font-family: Avenir;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid;
-    transition: 0.3s ease;
-  }
-
-  .level5:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
-  .level6 {
-    color: #171717;
-    font-family: Avenir;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid;
-    transition: 0.3s ease;
-  }
-
-  .level6:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
-  .level7 {
-    color: #171717;
-    font-family: Avenir;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px;
-    margin-bottom: 100px;
-    margin-right: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid;
-    transition: 0.3s ease;
-  }
-
-  .level7:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    transition: 0.3s ease;
-  }
+  .level,
+  .level1,
+  .level2,
+  .level3,
+  .level4,
+  .level5,
+  .level6,
+  .level7,
   .level8 {
-    color: #171717;
+    color: #006766;
     font-family: Avenir;
-    font-size: 30px;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 900;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .level:hover,
+  .level1:hover,
+  .level2:hover,
+  .level3:hover,
+  .level4:hover,
+  .level5:hover,
+  .level6:hover,
+  .level7:hover,
+  .level8:hover {
+    background-color: #006766;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid #006766;
+    transition: 0.3s ease;
+  }
+
+  #level1,
+  #level2,
+  #level3,
+  #level4,
+  #level5,
+  #level6,
+  #level7,
+  #level8 {
+    font-weight: bold;
+  }
+
+  .book,
+  .book1,
+  .book2,
+  .book3,
+  .book4,
+  .book5,
+  .book6,
+  .book7,
+  .book8 {
+    color: #006766;
+    font-family: Avenir;
+    font-size: 25px;
     font-style: normal;
     font-weight: 600;
     position: relative;
@@ -1506,20 +1690,33 @@
     margin-bottom: 100px;
     margin-right: 10px;
     margin-left: 10px;
-    color: #fff;
-    background-color: hsl(187, 35%, 47%);
-    padding: 10px 20px;
-    border-radius: 10px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
     cursor: pointer;
-    border: 1px solid;
     transition: 0.3s ease;
   }
 
-  .level8:hover {
-    color: hsl(187, 35%, 47%);
-    background-color: #fff;
-    border: 1px solid #fff;
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
+  .book:hover,
+  .book1:hover,
+  .book2:hover,
+  .book3:hover,
+  .book4:hover,
+  .book5:hover,
+  .book6:hover,
+  .book7:hover,
+  .book8:hover {
+    background-color: #006766;
+    color: hsl(0, 0%, 100%);
+    border: 2px solid #006766;
+    transition: 0.3s ease;
+  }
+
+  .highlighted {
+    color: hsl(0, 0%, 100%);
+    background-color: #006766;
+    border: 2px solid #006766;
     transition: 0.3s ease;
   }
 
@@ -1560,6 +1757,36 @@
     display: flex;
     margin-top: 35px;
     margin-bottom: 35px;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s;
+  }
+
+  .linefaculty {
+    width: 300px;
+    height: 8px;
+    background: var(--standard-produce, #006766);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s;
+  }
+
+  .line2about {
+    width: 300px;
+    height: 8px;
+    background: var(--standard-produce, #6ecfce);
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    opacity: 0;
+    transition: transform 0.7s, opacity 0.7s;
   }
 
   .offerdes {
@@ -1580,8 +1807,11 @@
     font-style: normal;
     font-weight: 500;
     width: 70%;
+    height: 100%;
     margin-bottom: 150px;
     line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
   }
 
   .alimdes2 {
@@ -1592,6 +1822,8 @@
     font-weight: 500;
     width: 65%;
     margin-bottom: 150px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
   }
 
   .alimdes3 {
@@ -1603,6 +1835,59 @@
     width: 100%;
     margin-bottom: 50px;
     line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+  }
+
+  .alimdes4 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .alimdes5 {
+    color: #171717;
+    font-family: Avenir;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 50px;
+    line-height: 50px;
+    transition: transform 0.7s, opacity 0.7s;
+    opacity: 0;
+  }
+
+  #scheduleprealim {
+    width: 60%;
+  }
+
+  .alimdesm {
+    display: none;
+  }
+
+  .facultyname {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: Adobe Garamond Pro;
+  }
+
+  .facultyname2 {
+    margin-left: 200px;
+    margin-right: 200px;
+    font-family: Adobe Garamond Pro;
+    margin-bottom: 50px;
   }
 
   .register {
@@ -1633,31 +1918,30 @@
   .schedule {
     margin-top: 50px;
     width: auto;
-    padding: 15px;
+    padding: 15px 30px;
     height: auto;
-    border-radius: 5px;
-    background: var(--standard-aware, hsl(187, 35%, 47%));
-    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
-    color: var(--standard-positive, #fff);
+    background: var(--standard-aware, #ffffff);
+    color: var(--standard-positive, #006766);
     text-align: center;
     font-family: Avenir;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 900;
-    border: 0px;
+    border-radius: 5px;
+    border: 2px solid #b1b1b1;
     cursor: pointer;
     transition: 0.3s ease;
   }
   .schedule:hover {
-    background: var(--standard-aware, #ffffff);
-    box-shadow: 0px 7px 7px 0px rgba(0, 0, 0, 0.15);
-    color: var(--standard-positive, hsl(187, 35%, 47%));
+    background: var(--standard-aware, #006766);
+    color: var(--standard-positive, hsl(0, 0%, 100%));
     transition: 0.3s ease;
+    border: 2px solid #006766;
   }
 
   .offerlearn {
     margin-top: 25px;
     width: auto;
-    padding: 25px;
+    padding: 20px 30px;
     height: auto;
     border-radius: 5px;
     background: var(--standard-aware, #006766);
@@ -1665,11 +1949,12 @@
     color: var(--standard-positive, #fff);
     text-align: center;
     font-family: Avenir;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 900;
     border: 0px;
     cursor: pointer;
     margin-bottom: 20px;
+    transition: 0.3s ease;
   }
 
   .offerlearn:hover {
@@ -1736,7 +2021,7 @@
     height: 100%;
     background: var(--standard-aware, #7da5a4);
     color: #000;
-    font-family: Avenir;
+    font-family: Adobe Garamond Pro;
     font-size: 56px;
     font-style: normal;
     font-weight: 600;
@@ -1752,14 +2037,14 @@
   .quote {
     color: #ffffff;
     text-align: center;
-    font-family: Avenir;
+    font-family: Adobe Garamond Pro;
     font-size: 50px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
+    line-height: 1.5;
     width: 90%;
     opacity: 0;
-    transition: opacity 2s;
+    transition: transform 1s, opacity 1s;
   }
 
   .quoteby {
@@ -1767,18 +2052,18 @@
     margin-bottom: 50px;
     color: #ffffff;
     text-align: center;
-    font-family: Avenir;
+    font-family: Adobe Garamond Pro;
     font-size: 45px;
     font-style: italic;
     font-weight: 600;
     line-height: normal;
     opacity: 0;
-    transition: opacity 2s;
+    transition: transform 1s, opacity 1s;
   }
 
   .quotebutton {
     width: auto;
-    padding: 20px;
+    padding: 15px 30px;
     height: auto;
     border-radius: 15px;
     border: 7px solid var(--standard-positive, #fff);
@@ -1787,12 +2072,12 @@
     color: var(--standard-aware, #fff);
     text-align: center;
     font-family: Avenir;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 900;
     cursor: pointer;
     align-items: center;
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 2s, background 0.3s ease, color 0.3s ease;
   }
 
   .quotebutton:hover {
@@ -1813,7 +2098,6 @@
     font-weight: 600;
     text-align: center;
     padding-top: 100px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1924,6 +2208,7 @@
     cursor: pointer;
     padding: 25px 30px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: 0.3s ease;
   }
 
   .subsbutton:hover {
@@ -2005,7 +2290,7 @@
 
   #line3 {
     width: 2px;
-    height: 241px;
+    height: 300px;
     background: #ffffff6c;
     z-index: 2;
     flex-direction: column;
@@ -2014,6 +2299,7 @@
     flex-shrink: 0;
     display: flex;
     margin-left: 50px;
+    margin-top: 10px;
   }
 
   #address {
@@ -2025,6 +2311,7 @@
 
   .footerlink {
     color: #ffffff5e;
+    transition: 0.3s ease;
   }
 
   .footerlink:hover {
@@ -2047,8 +2334,8 @@
 
   .offerlearn {
     width: auto;
-    padding: 25px;
-    font-size: 30px;
+    padding: 20px 30px;
+    font-size: 25px;
   }
 
   .offerimageparent {
@@ -2085,5 +2372,13 @@
   .pic {
     width: 380px;
     height: 270px;
+  }
+
+  .quote {
+    font-size: 45px;
+  }
+
+  .quoteby {
+    font-size: 40px;
   }
 }
